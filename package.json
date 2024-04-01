@@ -59,6 +59,7 @@
     "nx": "18.2.1",
     "postcss": "8.4.21",
     "prettier": "^2.6.2",
+    "prisma": "^5.11.0",
     "react-native-svg": "14.1.0",
     "react-native-svg-transformer": "1.2.0",
     "react-native-web": "^0.19.9",
