@@ -2,7 +2,13 @@
   "name": "@racetracker/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start:db:windows": "cd docker/ && docker-compose up -d",
+    "start:api": "nx serve api",
+    "start:web": "nx serve frontend",
+    "start:mobile": "nx serve mobile",
+    "start:all": "nx run-many --parallel --target=serve --projects=frontend,api,mobile"
+  },
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.14.5",
