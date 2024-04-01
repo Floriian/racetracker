@@ -108,3 +108,7 @@ yarn-error.log
 
 # testing
 /coverage
+
+# Environments
+.env
+.env.local
