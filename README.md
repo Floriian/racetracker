@@ -55,7 +55,7 @@ The Race Tracker App consists of three main components:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/race-tracker-app.git
+   git clone https://github.com/Floriian/racetracker.git
    ```
 
 2. Install dependencies:
@@ -139,7 +139,7 @@ A Versenykövető Alkalmazás három fő összetevőből áll:
 1. Klónozza a repository-t:
 
    ```bash
-   git clone https://github.com/yourusername/race-tracker-app.git
+   git clone https://github.com/Floriian/racetracker.git
    ```
 
 2. Telepítse a függőségeket:
