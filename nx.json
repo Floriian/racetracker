@@ -10,5 +10,21 @@
     ],
     "sharedGlobals": []
   },
-  "nxCloudAccessToken": "M2EyYTdjYzktYjMwOS00M2EyLWIxN2EtYzVhZmVjNmZjMTE0fHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "M2EyYTdjYzktYjMwOS00M2EyLWIxN2EtYzVhZmVjNmZjMTE0fHJlYWQtd3JpdGU=",
+  "plugins": [
+    {
+      "plugin": "@nx/react-native/plugin",
+      "options": {
+        "startTargetName": "start",
+        "podInstallTargetName": "pod-install",
+        "bundleTargetName": "bundle",
+        "runIosTargetName": "run-ios",
+        "runAndroidTargetName": "run-android",
+        "buildIosTargetName": "build-ios",
+        "buildAndroidTargetName": "build-android",
+        "syncDepsTargetName": "sync-deps",
+        "upgradeTargetname": "upgrade"
+      }
+    }
+  ]
 }
