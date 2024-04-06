@@ -1,0 +1,28 @@
+{
+  "name": "expo",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/expo/src",
+  "projectType": "application",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project expo --web",
+  "targets": {
+    "start": {
+      "executor": "@nx/expo:start",
+      "options": {
+        "port": 8081
+      }
+    },
+    "run-ios": {
+      "executor": "@nx/expo:run",
+      "options": {
+        "platform": "ios"
+      }
+    },
+    "run-android": {
+      "executor": "@nx/expo:run",
+      "options": {
+        "platform": "android"
+      }
+    }
+  }
+}
