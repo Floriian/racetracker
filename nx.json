@@ -59,17 +59,23 @@
       }
     },
     {
-      "plugin": "@nx/webpack/plugin",
-      "options": {
-        "buildTargetName": "build",
-        "serveTargetName": "serve",
-        "previewTargetName": "preview"
-      }
-    },
-    {
       "plugin": "@nx/jest/plugin",
       "options": {
         "targetName": "test"
+      }
+    },
+    {
+      "plugin": "@nx/expo/plugin",
+      "options": {
+        "startTargetName": "start",
+        "serveTargetName": "serve",
+        "runIosTargetName": "run-ios",
+        "runAndroidTargetName": "run-android",
+        "exportTargetName": "export",
+        "prebuildTargetName": "prebuild",
+        "installTargetName": "install",
+        "buildTargetName": "build",
+        "submitTargetName": "submit"
       }
     }
   ],
@@ -95,6 +101,9 @@
     "@nx/js:tsc": {
       "cache": true,
       "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
+    "build": {
       "inputs": ["production", "^production"]
     }
   }
