@@ -17,20 +17,20 @@
     ],
     "sharedGlobals": []
   },
-  "nxCloudAccessToken": "M2EyYTdjYzktYjMwOS00M2EyLWIxN2EtYzVhZmVjNmZjMTE0fHJlYWQtd3JpdGU=",
+  "nxCloudAccessToken": "MTQzNWJiMDYtM2IyMy00MTM0LThmODEtNjY5YjZmNmYxMDRmfHJlYWQtd3JpdGU=",
   "plugins": [
     {
-      "plugin": "@nx/react-native/plugin",
+      "plugin": "@nx/expo/plugin",
       "options": {
         "startTargetName": "start",
-        "podInstallTargetName": "pod-install",
-        "bundleTargetName": "bundle",
+        "serveTargetName": "serve",
         "runIosTargetName": "run-ios",
         "runAndroidTargetName": "run-android",
-        "buildIosTargetName": "build-ios",
-        "buildAndroidTargetName": "build-android",
-        "syncDepsTargetName": "sync-deps",
-        "upgradeTargetname": "upgrade"
+        "exportTargetName": "export",
+        "prebuildTargetName": "prebuild",
+        "installTargetName": "install",
+        "buildTargetName": "build",
+        "submitTargetName": "submit"
       }
     },
     {
@@ -65,17 +65,11 @@
       }
     },
     {
-      "plugin": "@nx/expo/plugin",
+      "plugin": "@nx/webpack/plugin",
       "options": {
-        "startTargetName": "start",
-        "serveTargetName": "serve",
-        "runIosTargetName": "run-ios",
-        "runAndroidTargetName": "run-android",
-        "exportTargetName": "export",
-        "prebuildTargetName": "prebuild",
-        "installTargetName": "install",
         "buildTargetName": "build",
-        "submitTargetName": "submit"
+        "serveTargetName": "serve",
+        "previewTargetName": "preview"
       }
     }
   ],
@@ -92,19 +86,8 @@
       },
       "library": {
         "style": "tailwind",
-        "linter": "eslint",
-        "unitTestRunner": "none"
+        "linter": "eslint"
       }
-    }
-  },
-  "targetDefaults": {
-    "@nx/js:tsc": {
-      "cache": true,
-      "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
-    },
-    "build": {
-      "inputs": ["production", "^production"]
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "AppsAndroid",
+    "name": "Android",
     "slug": "android",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,9 +13,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -23,18 +21,12 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      },
-      "package": "com.floriian.android"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
     },
-    "plugins": [],
-    "extra": {
-      "eas": {
-        "projectId": "b27035c9-cf46-440f-beda-34019f04bd81"
-      }
-    }
+    "plugins": []
   }
 }
