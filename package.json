@@ -1,0 +1,23 @@
+{
+  "name": "@racetracker/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "devDependencies": {
+    "@expo/cli": "~0.16.5",
+    "@nx/expo": "^18.2.4",
+    "@nx/express": "^18.2.4",
+    "@nx/js": "18.2.4",
+    "@nx/react": "^18.2.4",
+    "@nx/workspace": "18.2.4",
+    "nx": "18.2.4"
+  },
+  "dependencies": {
+    "expo": "~50.0.3",
+    "express": "^4.18.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-native": "0.73.2"
+  }
+}
