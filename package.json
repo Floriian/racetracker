@@ -2,7 +2,13 @@
   "name": "@racetracker/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start:db:windows": "cd docker/ && docker-compose up -d",
+    "start:api": "nx serve api",
+    "start:web": "nx serve web",
+    "start:mobile": "nx serve mobile",
+    "start:all": "nx run-many --parallel --target=serve --projects=web,api,mobile"
+  },
   "private": true,
   "devDependencies": {
     "@expo/cli": "~0.16.5",
@@ -69,7 +75,9 @@
   "dependencies": {
     "@expo/metro-config": "~0.17.3",
     "@expo/metro-runtime": "~3.1.1",
+    "@expo/webpack-config": "^19.0.1",
     "axios": "^1.6.0",
+    "crypto-browserify": "^3.12.0",
     "expo": "~50.0.3",
     "expo-splash-screen": "~0.26.1",
     "expo-status-bar": "~1.11.1",
@@ -81,6 +89,7 @@
     "react-native-svg-transformer": "1.2.0",
     "react-native-web": "~0.19.9",
     "react-router-dom": "6.11.2",
+    "stream-browserify": "^3.0.0",
     "tslib": "^2.3.0"
   }
 }
