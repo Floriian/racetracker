@@ -10,8 +10,26 @@ module.exports = {
     ),
     ...createGlobPatternsForDependencies(__dirname),
   ],
+  
   theme: {
-    extend: {},
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
+    extend: {
+      colors: {
+      base: '#0C0C09',
+      lead: '#F5A300',
+      dark: '#201F1D'
+    },
+    backgroundColor: {
+      dark: '#201F1D',
+      lead: '#F5A300'
+    },
+    },
   },
   plugins: [],
 };

@@ -1,3 +1,4 @@
+import Navbar from './navbar';
 import NxWelcome from './nx-welcome';
 
 import { Route, Routes, Link } from 'react-router-dom';
@@ -5,6 +6,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 export function App() {
   return (
     <div>
+      <Navbar/>
       <NxWelcome title="web" />
 
       {/* START: routes */}
