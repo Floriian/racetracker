@@ -4,7 +4,14 @@ import { prisma } from '../database';
 import { JwtPayload as CustomPayload } from '../types';
 
 export const strategy = new Strategy(
-  async (token: string, done: (error: unknown, user?: unknown, options?: IVerifyOptions | string) => void) => {
+  async (
+    token: string,
+    done: (
+      error: unknown,
+      user?: CustomPayload | boolean | Record<string, unknown>,
+      options?: IVerifyOptions | string
+    ) => void
+  ) => {
     try {
       const verifyToken = jwt.verify(
         token,
@@ -17,8 +24,13 @@ export const strategy = new Strategy(
       });
 
       if (!user) return done(null, false);
-      delete user.password;
-      return done(null, user, { scope: 'all' });
+
+      const payloadUser: CustomPayload = {
+        sub: user.id,
+        email: user.email,
+      };
+
+      return done(null, payloadUser, { scope: 'all' });
     } catch (e) {
       if (e instanceof JsonWebTokenError) {
         return done(null, { message: 'Invalid token.' });
