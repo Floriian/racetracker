@@ -1,10 +1,10 @@
-import { Strategy } from 'passport-http-bearer';
+import { IVerifyOptions, Strategy } from 'passport-http-bearer';
 import jwt, { JsonWebTokenError, JwtPayload } from 'jsonwebtoken';
 import { prisma } from '../database';
 import { JwtPayload as CustomPayload } from '../types';
 
 export const strategy = new Strategy(
-  async (token: string, done: (...args: any) => void) => {
+  async (token: string, done: (error: unknown, user?: unknown, options?: IVerifyOptions | string) => void) => {
     try {
       const verifyToken = jwt.verify(
         token,
