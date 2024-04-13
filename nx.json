@@ -17,20 +17,20 @@
     ],
     "sharedGlobals": []
   },
-  "nxCloudAccessToken": "M2EyYTdjYzktYjMwOS00M2EyLWIxN2EtYzVhZmVjNmZjMTE0fHJlYWQtd3JpdGU=",
+  "nxCloudAccessToken": "MTQzNWJiMDYtM2IyMy00MTM0LThmODEtNjY5YjZmNmYxMDRmfHJlYWQtd3JpdGU=",
   "plugins": [
     {
-      "plugin": "@nx/react-native/plugin",
+      "plugin": "@nx/expo/plugin",
       "options": {
         "startTargetName": "start",
-        "podInstallTargetName": "pod-install",
-        "bundleTargetName": "bundle",
+        "serveTargetName": "serve",
         "runIosTargetName": "run-ios",
         "runAndroidTargetName": "run-android",
-        "buildIosTargetName": "build-ios",
-        "buildAndroidTargetName": "build-android",
-        "syncDepsTargetName": "sync-deps",
-        "upgradeTargetname": "upgrade"
+        "exportTargetName": "export",
+        "prebuildTargetName": "prebuild",
+        "installTargetName": "install",
+        "buildTargetName": "build",
+        "submitTargetName": "submit"
       }
     },
     {
@@ -59,17 +59,17 @@
       }
     },
     {
+      "plugin": "@nx/jest/plugin",
+      "options": {
+        "targetName": "test"
+      }
+    },
+    {
       "plugin": "@nx/webpack/plugin",
       "options": {
         "buildTargetName": "build",
         "serveTargetName": "serve",
         "previewTargetName": "preview"
-      }
-    },
-    {
-      "plugin": "@nx/jest/plugin",
-      "options": {
-        "targetName": "test"
       }
     }
   ],
@@ -88,13 +88,6 @@
         "style": "tailwind",
         "linter": "eslint"
       }
-    }
-  },
-  "targetDefaults": {
-    "@nx/js:tsc": {
-      "cache": true,
-      "dependsOn": ["^build"],
-      "inputs": ["production", "^production"]
     }
   }
 }
