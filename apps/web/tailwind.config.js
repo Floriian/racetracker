@@ -10,7 +10,7 @@ module.exports = {
     ),
     ...createGlobPatternsForDependencies(__dirname),
   ],
-  
+
   theme: {
     screens: {
       sm: '640px',
@@ -21,14 +21,14 @@ module.exports = {
     },
     extend: {
       colors: {
-      base: '#0C0C09',
-      lead: '#F5A300',
-      dark: '#201F1D'
-    },
-    backgroundColor: {
-      dark: '#201F1D',
-      lead: '#F5A300'
-    },
+        primary: '#0C0C09',
+        lead: { DEFAULT: '#F5A300', dark: '#FF9700' },
+        light: { DEFAULT: '#F4F4F5', 200: '#A1A1AA', 300: '#71717A' },
+      },
+      backgroundColor: {
+        dark: '#18181B',
+        darker: '#09090B',
+      },
     },
   },
   plugins: [],

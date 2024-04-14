@@ -18,7 +18,7 @@ export function Navbar() {
         }}
       />
 
-      <nav className="bg-white border-gray-200 dark:bg-dark">
+      <nav role="navigation" className="bg-white border-gray-200 dark:bg-dark">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
             to="/"
