@@ -24,6 +24,7 @@ module.exports = {
         primary: '#0C0C09',
         lead: { DEFAULT: '#F5A300', dark: '#FF9700' },
         light: { DEFAULT: '#F4F4F5', 200: '#A1A1AA', 300: '#71717A' },
+        disabled: { DEFAULT: '#767676', dark: '#333333' },
       },
       backgroundColor: {
         dark: '#18181B',
