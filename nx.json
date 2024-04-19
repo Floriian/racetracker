@@ -17,7 +17,7 @@
     ],
     "sharedGlobals": []
   },
-  "nxCloudAccessToken": "MTQzNWJiMDYtM2IyMy00MTM0LThmODEtNjY5YjZmNmYxMDRmfHJlYWQtd3JpdGU=",
+  "nxCloudAccessToken": "YTI5NzAxNGEtNzg1NC00NzU4LTkxYzMtZWMxZDYyMzU1M2ZifHJlYWQtd3JpdGU=",
   "plugins": [
     {
       "plugin": "@nx/expo/plugin",
