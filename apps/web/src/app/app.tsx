@@ -1,26 +1,33 @@
-import Footer from './footer';
-import Hero from './hero';
-import Navbar from './navbar';
+import { Suspense, lazy } from 'react';
+import { Link, createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { Route, Routes, Link } from 'react-router-dom';
+import Loader from './components/loader';
+import Home from './pages/home';
+
+const Layout = lazy(() => import('./layout'));
 
 export function App() {
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { index: true, element: <Home /> },
+      {
+        path: 'page-2',
+        element: (
+          <div>
+            <Link to="/">Click here to go back to root page.</Link>
+          </div>
+        ),
+      },
+    ],
+  },
+]);
   return (
-    <main className="min-h-screen">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route
-          path="/page-2"
-          element={
-            <div>
-              <Link to="/">Click here to go back to root page.</Link>
-            </div>
-          }
-        />
-      </Routes>
-      <Footer />
-    </main>
+    <Suspense fallback={<Loader />}>
+      <RouterProvider router={router} />
+    </Suspense>
   );
 }
 
