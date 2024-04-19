@@ -1,5 +1,7 @@
 version: '3.8'
 
+name: racetracker-local
+
 services:
   dev-database:
     image: postgres:latest
