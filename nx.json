@@ -17,7 +17,7 @@
     ],
     "sharedGlobals": []
   },
-  "nxCloudAccessToken": "YTI5NzAxNGEtNzg1NC00NzU4LTkxYzMtZWMxZDYyMzU1M2ZifHJlYWQtd3JpdGU=",
+  "nxCloudAccessToken": "YTZjNmU0N2ItZjQwNy00N2ExLWFkYzItODhhNDQ4MGQ0YWU1fHJlYWQtd3JpdGU=",
   "plugins": [
     {
       "plugin": "@nx/expo/plugin",
@@ -43,12 +43,7 @@
         "serveStaticTargetName": "serve-static"
       }
     },
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    },
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
     {
       "plugin": "@nx/cypress/plugin",
       "options": {
@@ -58,12 +53,7 @@
         "openTargetName": "open-cypress"
       }
     },
-    {
-      "plugin": "@nx/jest/plugin",
-      "options": {
-        "targetName": "test"
-      }
-    },
+    { "plugin": "@nx/jest/plugin", "options": { "targetName": "test" } },
     {
       "plugin": "@nx/webpack/plugin",
       "options": {
@@ -81,13 +71,8 @@
         "linter": "eslint",
         "bundler": "vite"
       },
-      "component": {
-        "style": "tailwind"
-      },
-      "library": {
-        "style": "tailwind",
-        "linter": "eslint"
-      }
+      "component": { "style": "tailwind" },
+      "library": { "style": "tailwind", "linter": "eslint" }
     }
   },
   "targetDefaults": {
