@@ -1,11 +1,5 @@
 import { Request, Response } from 'express';
-import argon2 from 'argon2';
-import { prisma } from '../database';
 import { SignUpSchema, type SignInSchema } from '@racetracker/validation';
-import jwt from 'jsonwebtoken';
-import type { JwtPayload } from '../types';
-import { PrismaClientKnownRequestError } from '@prisma/client/runtime/library';
-import { env } from '../env';
 import { HttpException } from '../utils';
 import { authService } from './auth.service';
 
